@@ -25,8 +25,11 @@
 然后在浏览器中（不关闭终端）打开
 `http://localhost:9090/hello/主机名`
 可以看到页面上出现service中的字符：
+
 ![浏览器](http://img.blog.csdn.net/20171114223654673?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGVwcmVjaGF1bl8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 此时终端中的监听信息如下
+
 ![这里写图片描述](http://img.blog.csdn.net/20171114223722445?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGVwcmVjaGF1bl8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 #### **·**   进行curl测试
 在不关闭当前终端的情况下开启另一个终端，并在该终端上使用curl命令
@@ -35,7 +38,10 @@
 #### **·**   进行ApacheBench测试
 使用命令
 `ab -n 1000 -c 100 http://localhost:9090/hello/主机名`
+
 测试结果如下
+
 ![这里写图片描述](http://img.blog.csdn.net/20171114224242549?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGVwcmVjaGF1bl8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ![这里写图片描述](http://img.blog.csdn.net/20171114224253357?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGVwcmVjaGF1bl8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 从结果中我们可以得到，总共发送了1000个请求，失败0个，耗时0.207秒，其中50%的请求可以在19ms内被响应，90%的请求可以在25ms内被响应，最长的响应时间为35ms。
